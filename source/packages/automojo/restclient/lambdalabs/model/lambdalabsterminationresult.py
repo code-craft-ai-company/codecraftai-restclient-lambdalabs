@@ -14,7 +14,7 @@ __credits__ = []
 
 from typing import Any, Dict, List, Optional
 
-from automojo.interop.lambdalabs.model.lambdalabsinstance import (
+from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
 

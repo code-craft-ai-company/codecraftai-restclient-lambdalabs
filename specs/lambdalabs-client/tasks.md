@@ -2,7 +2,7 @@
 
 ## Package Skeleton
 
-- [x] 1. Create `source/packages/automojo/interop/lambdalabs/` package tree with `apigroups/`, `model/`, `specs/`, `exceptions/` subpackages.
+- [x] 1. Create `source/packages/automojo/restclient/lambdalabs/` package tree with `apigroups/`, `model/`, `specs/`, `exceptions/` subpackages.
 - [x] 2. Add `aspectslambdalabs.py` defining `DEFAULT_LAMBDALABS_ASPECTS`.
 
 ## Client Core

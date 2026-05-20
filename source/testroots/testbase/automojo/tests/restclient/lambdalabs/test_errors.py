@@ -15,15 +15,15 @@ __credits__ = []
 import pytest
 import requests_mock as rm_module
 
-from automojo.interop.lambdalabs.exceptions.lambdalabserrors import (
+from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsAuthenticationError, LambdalabsError,
     LambdalabsInstanceTypeNotFoundError, LambdalabsQuotaExceededError
 )
-from automojo.interop.lambdalabs.specs.lambdalabslaunchspec import (
+from automojo.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from automojo.tests.interop.lambdalabs.testsupport import (
+from automojo.tests.restclient.lambdalabs.testsupport import (
     API, data_envelope, error_envelope, make_client
 )
 

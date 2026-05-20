@@ -2,7 +2,7 @@
 Automation Mojo Interop - Lambda Labs
 =========================================
 
-The ``automojo-interop-lambdalabs`` package is the venue-specific REST client for Lambda
+The ``automojo-restclient-lambdalabs`` package is the venue-specific REST client for Lambda
 Labs, a GPU-focused cloud whose API surface is one of the smallest and cleanest in the
 AI-cloud landscape. The provider exposes a traditional IaaS shape — ``instances``,
 ``ssh-keys``, ``file-systems``, and ``1-click-clusters`` — with no Kubernetes or
@@ -23,8 +23,8 @@ Repository Structure
 
 - ``development/`` - Runtime environment scripts.
 - ``repository-setup/`` - Repository homing and setup scripts.
-- ``source/packages/automojo/interop/lambdalabs/`` - Package source code.
-- ``source/testroots/testbase/automojo/tests/interop/lambdalabs/`` - TestBase test roots.
+- ``source/packages/automojo/restclient/lambdalabs/`` - Package source code.
+- ``source/testroots/testbase/automojo/tests/restclient/lambdalabs/`` - TestBase test roots.
 - ``specs/`` - Requirements, design, and task documentation (Kiro-style).
 - ``userguide/`` - Standards, conventions, and documentation.
 

@@ -30,43 +30,43 @@ from automojo.credentials.lambdalabsapikeycredential import (
 
 from automojo.restclient.base.restclientbase import RestClientBase
 
-from automojo.interop.lambdalabs.aspectslambdalabs import (
+from automojo.restclient.lambdalabs.aspectslambdalabs import (
     AspectsLambdalabs, DEFAULT_LAMBDALABS_ASPECTS
 )
-from automojo.interop.lambdalabs.apigroups.clustersgroup import ClustersGroup
-from automojo.interop.lambdalabs.apigroups.filesystemsgroup import (
+from automojo.restclient.lambdalabs.apigroups.clustersgroup import ClustersGroup
+from automojo.restclient.lambdalabs.apigroups.filesystemsgroup import (
     FilesystemsGroup
 )
-from automojo.interop.lambdalabs.apigroups.imagesgroup import ImagesGroup
-from automojo.interop.lambdalabs.apigroups.instancesgroup import InstancesGroup
-from automojo.interop.lambdalabs.apigroups.instancetypesgroup import (
+from automojo.restclient.lambdalabs.apigroups.imagesgroup import ImagesGroup
+from automojo.restclient.lambdalabs.apigroups.instancesgroup import InstancesGroup
+from automojo.restclient.lambdalabs.apigroups.instancetypesgroup import (
     InstanceTypesGroup
 )
-from automojo.interop.lambdalabs.apigroups.sshkeysgroup import SshKeysGroup
-from automojo.interop.lambdalabs.exceptions.lambdalabserrors import (
+from automojo.restclient.lambdalabs.apigroups.sshkeysgroup import SshKeysGroup
+from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsInstanceFailedError
 )
-from automojo.interop.lambdalabs.model.lambdalabscluster import (
+from automojo.restclient.lambdalabs.model.lambdalabscluster import (
     LambdalabsCluster
 )
-from automojo.interop.lambdalabs.model.lambdalabsfilesystem import (
+from automojo.restclient.lambdalabs.model.lambdalabsfilesystem import (
     LambdalabsFilesystem
 )
-from automojo.interop.lambdalabs.model.lambdalabsimage import LambdalabsImage
-from automojo.interop.lambdalabs.model.lambdalabsinstance import (
+from automojo.restclient.lambdalabs.model.lambdalabsimage import LambdalabsImage
+from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
-from automojo.interop.lambdalabs.model.lambdalabsinstancetype import (
+from automojo.restclient.lambdalabs.model.lambdalabsinstancetype import (
     LambdalabsInstanceType
 )
-from automojo.interop.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
-from automojo.interop.lambdalabs.model.lambdalabsterminationresult import (
+from automojo.restclient.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
+from automojo.restclient.lambdalabs.model.lambdalabsterminationresult import (
     LambdalabsTerminationResult
 )
-from automojo.interop.lambdalabs.specs.lambdalabsclusterspec import (
+from automojo.restclient.lambdalabs.specs.lambdalabsclusterspec import (
     LambdalabsClusterSpec
 )
-from automojo.interop.lambdalabs.specs.lambdalabslaunchspec import (
+from automojo.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 

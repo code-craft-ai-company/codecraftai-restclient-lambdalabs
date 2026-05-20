@@ -19,18 +19,18 @@ import json
 import pytest
 import requests_mock as rm_module
 
-from automojo.interop.lambdalabs.model.lambdalabsinstance import (
+from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
-from automojo.interop.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
-from automojo.interop.lambdalabs.specs.lambdalabsclusterspec import (
+from automojo.restclient.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
+from automojo.restclient.lambdalabs.specs.lambdalabsclusterspec import (
     LambdalabsClusterSpec
 )
-from automojo.interop.lambdalabs.specs.lambdalabslaunchspec import (
+from automojo.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from automojo.tests.interop.lambdalabs.testsupport import (
+from automojo.tests.restclient.lambdalabs.testsupport import (
     API, data_envelope, make_client
 )
 

@@ -26,7 +26,7 @@ that are well design, cohesive, and easy to use and that provide rapid but stabl
 
 # Project Overview
 
-The `automojo-interop-lambdalabs` package is the venue-specific REST client
+The `automojo-restclient-lambdalabs` package is the venue-specific REST client
 for Lambda Labs, a GPU-focused cloud whose API surface is one of the
 smallest and cleanest in the AI-cloud landscape. The provider exposes a
 traditional IaaS shape — `instances`, `ssh-keys`, `file-systems`, and
@@ -48,10 +48,10 @@ The transport is REST built on `RestClientBase` from
 typed `LambdalabsApiKeyCredential` instances from `automojo-credentials`.
 
 # Testing Conventions
-The 'automojo-interop-lambdalabs' package repository utilizes the 'testbase' framework
+The 'automojo-restclient-lambdalabs' package repository utilizes the 'testbase' framework
 for tests that require live resources, and the 'unittest' framework for isolated
 component tests. Single-host tests live under
-'source/testroots/automojo/tests/singlehost/interop/lambdalabs'.
+'source/testroots/automojo/tests/singlehost/restclient/lambdalabs'.
 
 Property-based tests (hypothesis) are required for paging, URL composition for
 nested resources, and idempotent retry semantics.

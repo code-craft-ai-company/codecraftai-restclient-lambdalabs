@@ -23,17 +23,17 @@ from hypothesis import strategies as st
 
 from automojo.errors.exceptions import SemanticError
 
-from automojo.interop.lambdalabs.apigroups.groupsupport import (
+from automojo.restclient.lambdalabs.apigroups.groupsupport import (
     compose_leaf, encode_segment
 )
-from automojo.interop.lambdalabs.apigroups.pagingsupport import (
+from automojo.restclient.lambdalabs.apigroups.pagingsupport import (
     collect_all_pages
 )
-from automojo.interop.lambdalabs.aspectslambdalabs import AspectsLambdalabs
-from automojo.interop.lambdalabs.exceptions.lambdalabserrors import (
+from automojo.restclient.lambdalabs.aspectslambdalabs import AspectsLambdalabs
+from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsInstanceFailedError
 )
-from automojo.interop.lambdalabs.model.lambdalabsinstance import (
+from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
 
@@ -215,7 +215,7 @@ def _bind_waiter(stream_client):
 
         :returns: A callable equivalent to the bound waiter method.
     """
-    from automojo.interop.lambdalabs.lambdalabsclient import LambdalabsClient
+    from automojo.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
     def _call(*, instance_id: str, aspects):
         rtnval = LambdalabsClient.wait_until_running(stream_client,

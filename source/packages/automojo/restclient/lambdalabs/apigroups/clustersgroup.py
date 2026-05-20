@@ -18,20 +18,20 @@ from automojo.errors.exceptions import SemanticError
 
 from automojo.restclient.base.restapigroup import RestApiGroup
 
-from automojo.interop.lambdalabs.aspectslambdalabs import (
+from automojo.restclient.lambdalabs.aspectslambdalabs import (
     AspectsLambdalabs, DEFAULT_LAMBDALABS_ASPECTS
 )
-from automojo.interop.lambdalabs.apigroups.groupsupport import (
+from automojo.restclient.lambdalabs.apigroups.groupsupport import (
     compose_leaf, extract_data, raise_for_status, require_identifier,
     safe_json
 )
-from automojo.interop.lambdalabs.apigroups.pagingsupport import (
+from automojo.restclient.lambdalabs.apigroups.pagingsupport import (
     collect_all_pages
 )
-from automojo.interop.lambdalabs.model.lambdalabscluster import (
+from automojo.restclient.lambdalabs.model.lambdalabscluster import (
     LambdalabsCluster
 )
-from automojo.interop.lambdalabs.specs.lambdalabsclusterspec import (
+from automojo.restclient.lambdalabs.specs.lambdalabsclusterspec import (
     LambdalabsClusterSpec
 )
 

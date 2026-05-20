@@ -16,16 +16,16 @@ from typing import Dict, List
 
 from automojo.restclient.base.restapigroup import RestApiGroup
 
-from automojo.interop.lambdalabs.aspectslambdalabs import (
+from automojo.restclient.lambdalabs.aspectslambdalabs import (
     AspectsLambdalabs, DEFAULT_LAMBDALABS_ASPECTS
 )
-from automojo.interop.lambdalabs.apigroups.groupsupport import (
+from automojo.restclient.lambdalabs.apigroups.groupsupport import (
     compose_leaf, extract_data, raise_for_status
 )
-from automojo.interop.lambdalabs.exceptions.lambdalabserrors import (
+from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsInstanceTypeNotFoundError
 )
-from automojo.interop.lambdalabs.model.lambdalabsinstancetype import (
+from automojo.restclient.lambdalabs.model.lambdalabsinstancetype import (
     LambdalabsInstanceType
 )
 

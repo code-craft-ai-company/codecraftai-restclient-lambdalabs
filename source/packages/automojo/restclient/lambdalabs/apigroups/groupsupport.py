@@ -22,7 +22,7 @@ from requests import Response
 
 from automojo.errors.exceptions import SemanticError
 
-from automojo.interop.lambdalabs.exceptions.lambdalabserrors import (
+from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsAuthenticationError, LambdalabsError,
     LambdalabsQuotaExceededError
 )

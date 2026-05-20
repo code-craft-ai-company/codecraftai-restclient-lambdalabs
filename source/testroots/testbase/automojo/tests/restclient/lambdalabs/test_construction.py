@@ -18,9 +18,9 @@ from automojo.errors.exceptions import ConfigurationError
 
 from automojo.credentials.basiccredential import BasicCredential
 
-from automojo.interop.lambdalabs.lambdalabsclient import LambdalabsClient
+from automojo.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
-from automojo.tests.interop.lambdalabs.testsupport import (
+from automojo.tests.restclient.lambdalabs.testsupport import (
     make_client, make_credential
 )
 

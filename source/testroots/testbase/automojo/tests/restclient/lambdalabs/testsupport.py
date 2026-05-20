@@ -16,7 +16,7 @@ from automojo.credentials.lambdalabsapikeycredential import (
     LambdalabsApiKeyCredential
 )
 
-from automojo.interop.lambdalabs.lambdalabsclient import LambdalabsClient
+from automojo.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
 
 TEST_HOST = "cloud.lambdalabs.test"

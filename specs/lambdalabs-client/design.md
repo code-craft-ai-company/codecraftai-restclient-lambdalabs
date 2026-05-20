@@ -65,7 +65,7 @@ Exceptions:
 ## Module Layout
 
 ```
-source/packages/automojo/interop/lambdalabs/
+source/packages/automojo/restclient/lambdalabs/
 ├── __init__.py
 ├── lambdalabsclient.py
 ├── aspectslambdalabs.py

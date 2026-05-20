@@ -16,16 +16,16 @@ from typing import List, Optional, Tuple
 
 from automojo.restclient.base.restapigroup import RestApiGroup
 
-from automojo.interop.lambdalabs.aspectslambdalabs import (
+from automojo.restclient.lambdalabs.aspectslambdalabs import (
     AspectsLambdalabs, DEFAULT_LAMBDALABS_ASPECTS
 )
-from automojo.interop.lambdalabs.apigroups.groupsupport import (
+from automojo.restclient.lambdalabs.apigroups.groupsupport import (
     compose_leaf, extract_data, raise_for_status, safe_json
 )
-from automojo.interop.lambdalabs.apigroups.pagingsupport import (
+from automojo.restclient.lambdalabs.apigroups.pagingsupport import (
     collect_all_pages
 )
-from automojo.interop.lambdalabs.model.lambdalabsimage import LambdalabsImage
+from automojo.restclient.lambdalabs.model.lambdalabsimage import LambdalabsImage
 
 
 class ImagesGroup(RestApiGroup):

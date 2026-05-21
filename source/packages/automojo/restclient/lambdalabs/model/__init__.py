@@ -2,7 +2,7 @@
     .. module:: model
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: Package that contains the hand-authored typed model
-                   classes for the Lambda Labs interop client.
+                   classes for the Lambda Labs REST client.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>
 """

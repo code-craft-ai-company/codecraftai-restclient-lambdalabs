@@ -2,7 +2,7 @@
     .. module:: test_errors
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: HTTP-error reclassification tests for the Lambda Labs
-                   interop client.
+                   REST client.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>
 """

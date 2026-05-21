@@ -2,7 +2,7 @@
     .. module:: test_properties
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: Property-based (hypothesis) tests for the Lambda Labs
-                   interop client — paging traversal, URL composition,
+                   REST client — paging traversal, URL composition,
                    idempotent retry, and waiter correctness.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>

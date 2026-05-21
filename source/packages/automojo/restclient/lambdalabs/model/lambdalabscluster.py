@@ -119,6 +119,28 @@ class LambdalabsCluster:
         """
         return self._interconnect_status
 
+    def to_dict(self) -> Dict[str, Any]:
+        """
+            Serialize this :class:`LambdalabsCluster` to a canonical API
+            payload.
+
+            The emitted keys match the primary key names that
+            :meth:`from_dict` reads, so ``from_dict(to_dict(x))``
+            reconstructs an equal record.
+
+            :returns: A dictionary payload describing this cluster.
+        """
+        rtnval: Dict[str, Any] = {
+            "id": self._identifier,
+            "name": self._name,
+            "status": self._status,
+            "region": self._region,
+            "instance_type": self._instance_type_name,
+            "instance_ids": list(self._instance_ids),
+            "interconnect_status": self._interconnect_status,
+        }
+        return rtnval
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "LambdalabsCluster":
         """

@@ -1,7 +1,7 @@
 """
     .. module:: testsupport
         :platform: Darwin, Linux, Unix, Windows
-        :synopsis: Shared construction helpers for the Lambda Labs interop
+        :synopsis: Shared construction helpers for the Lambda Labs REST
                    client test suite.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>

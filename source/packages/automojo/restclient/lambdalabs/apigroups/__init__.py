@@ -1,7 +1,7 @@
 """
     .. module:: apigroups
         :platform: Darwin, Linux, Unix, Windows
-        :synopsis: Package that contains the Lambda Labs interop client api
+        :synopsis: Package that contains the Lambda Labs REST client api
                    groups.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>

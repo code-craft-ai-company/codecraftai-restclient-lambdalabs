@@ -2,7 +2,7 @@
     .. module:: lambdalabserrors
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: Module that contains the exception types raised by the
-                   Lambda Labs interop client when API calls fail.
+                   Lambda Labs REST client when API calls fail.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>
 """
@@ -14,7 +14,7 @@ __credits__ = []
 
 class LambdalabsError(RuntimeError):
     """
-        Base class for every Lambda Labs interop client error.
+        Base class for every Lambda Labs REST client error.
     """
 
 

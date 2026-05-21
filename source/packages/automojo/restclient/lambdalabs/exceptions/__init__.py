@@ -2,7 +2,7 @@
     .. module:: exceptions
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: Package that contains the exception types raised by the
-                   Lambda Labs interop client.
+                   Lambda Labs REST client.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>
 """

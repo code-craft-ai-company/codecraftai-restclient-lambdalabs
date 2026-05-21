@@ -2,7 +2,7 @@
     .. module:: specs
         :platform: Darwin, Linux, Unix, Windows
         :synopsis: Package that contains the request-spec classes for the
-                   Lambda Labs interop client.
+                   Lambda Labs REST client.
 
     .. moduleauthor:: Myron Walker <myron.walker@gmail.com>
 """

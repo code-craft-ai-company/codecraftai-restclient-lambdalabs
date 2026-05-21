@@ -77,6 +77,25 @@ class LambdalabsSshKey:
         """
         return self._private_key
 
+    def to_dict(self) -> Dict[str, Any]:
+        """
+            Serialize this :class:`LambdalabsSshKey` to a canonical API
+            payload.
+
+            The emitted keys match the primary key names that
+            :meth:`from_dict` reads, so ``from_dict(to_dict(x))``
+            reconstructs an equal record.
+
+            :returns: A dictionary payload describing this SSH key.
+        """
+        rtnval: Dict[str, Any] = {
+            "id": self._identifier,
+            "name": self._name,
+            "public_key": self._public_key,
+            "private_key": self._private_key,
+        }
+        return rtnval
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "LambdalabsSshKey":
         """

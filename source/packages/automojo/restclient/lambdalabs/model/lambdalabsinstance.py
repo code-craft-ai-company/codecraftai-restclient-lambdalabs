@@ -201,6 +201,32 @@ class LambdalabsInstance:
         rtnval = self._status in TERMINAL_FAILED_STATES
         return rtnval
 
+    def to_dict(self) -> Dict[str, Any]:
+        """
+            Serialize this :class:`LambdalabsInstance` to a canonical API
+            payload.
+
+            The emitted keys match the primary key names that
+            :meth:`from_dict` reads, so ``from_dict(to_dict(x))``
+            reconstructs an equal record.
+
+            :returns: A dictionary payload describing this instance.
+        """
+        rtnval: Dict[str, Any] = {
+            "id": self._identifier,
+            "name": self._name,
+            "status": self._status,
+            "region": self._region,
+            "instance_type": self._instance_type_name,
+            "ip": self._ip,
+            "private_ip": self._private_ip,
+            "hostname": self._hostname,
+            "ssh_key_names": list(self._ssh_key_names),
+            "file_system_names": list(self._file_system_names),
+            "jupyter_url": self._jupyter_url,
+        }
+        return rtnval
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "LambdalabsInstance":
         """

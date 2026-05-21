@@ -142,6 +142,43 @@ class LambdalabsInstanceType:
         rtnval = list(self._regions_with_capacity)
         return rtnval
 
+    def to_dict(self) -> Dict[str, Any]:
+        """
+            Serialize this :class:`LambdalabsInstanceType` to a canonical
+            API payload.
+
+            The Lambda Labs ``instance-types`` payload nests the type
+            description under an ``instance_type`` key (with a ``specs``
+            sub-object) and the capacity list under a sibling
+            ``regions_with_capacity_available`` key.  This method emits that
+            same nested shape so ``from_dict(to_dict(x))`` reconstructs an
+            equal record.
+
+            :returns: A nested dictionary payload describing this type.
+        """
+        specs: Dict[str, Any] = {
+            "vcpus": self._vcpus,
+            "memory_gib": self._memory_gib,
+            "storage_gib": self._storage_gib,
+            "gpus": self._gpu_count,
+        }
+        instance_type: Dict[str, Any] = {
+            "name": self._name,
+            "description": self._description,
+            "gpu_description": self._gpu_description,
+            "price_cents_per_hour": self._price_cents_per_hour,
+            "specs": specs,
+        }
+        regions: List[Dict[str, str]] = []
+        for region_name in self._regions_with_capacity:
+            regions.append({"name": region_name})
+
+        rtnval: Dict[str, Any] = {
+            "instance_type": instance_type,
+            "regions_with_capacity_available": regions,
+        }
+        return rtnval
+
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "LambdalabsInstanceType":
         """

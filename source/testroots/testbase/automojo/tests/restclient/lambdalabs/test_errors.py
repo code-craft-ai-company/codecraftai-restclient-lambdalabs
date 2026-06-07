@@ -8,22 +8,22 @@
 """
 
 __author__ = "Myron Walker"
-__copyright__ = "Copyright 2026, Automation Mojo LLC"
+__copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
 import pytest
 import requests_mock as rm_module
 
-from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
+from ccai.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsAuthenticationError, LambdalabsError,
     LambdalabsInstanceTypeNotFoundError, LambdalabsQuotaExceededError
 )
-from automojo.restclient.lambdalabs.specs.lambdalabslaunchspec import (
+from ccai.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from automojo.tests.restclient.lambdalabs.testsupport import (
+from ccai.tests.restclient.lambdalabs.testsupport import (
     API, data_envelope, error_envelope, make_client
 )
 

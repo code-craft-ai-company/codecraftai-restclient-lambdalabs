@@ -9,26 +9,26 @@
 """
 
 __author__ = "Myron Walker"
-__copyright__ = "Copyright 2026, Automation Mojo LLC"
+__copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
-from automojo.restclient.lambdalabs.model.lambdalabscluster import (
+from ccai.restclient.lambdalabs.model.lambdalabscluster import (
     LambdalabsCluster
 )
-from automojo.restclient.lambdalabs.model.lambdalabsfilesystem import (
+from ccai.restclient.lambdalabs.model.lambdalabsfilesystem import (
     LambdalabsFilesystem
 )
-from automojo.restclient.lambdalabs.model.lambdalabsimage import (
+from ccai.restclient.lambdalabs.model.lambdalabsimage import (
     LambdalabsImage
 )
-from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
+from ccai.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
-from automojo.restclient.lambdalabs.model.lambdalabsinstancetype import (
+from ccai.restclient.lambdalabs.model.lambdalabsinstancetype import (
     LambdalabsInstanceType
 )
-from automojo.restclient.lambdalabs.model.lambdalabssshkey import (
+from ccai.restclient.lambdalabs.model.lambdalabssshkey import (
     LambdalabsSshKey
 )
 

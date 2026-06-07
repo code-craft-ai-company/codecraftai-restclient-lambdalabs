@@ -8,19 +8,19 @@
 """
 
 __author__ = "Myron Walker"
-__copyright__ = "Copyright 2026, Automation Mojo LLC"
+__copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
 import pytest
 
-from automojo.errors.exceptions import ConfigurationError
+from ccai.errors.exceptions import ConfigurationError
 
-from automojo.credentials.basiccredential import BasicCredential
+from ccai.credentials.basiccredential import BasicCredential
 
-from automojo.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
+from ccai.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
-from automojo.tests.restclient.lambdalabs.testsupport import (
+from ccai.tests.restclient.lambdalabs.testsupport import (
     make_client, make_credential
 )
 
@@ -65,7 +65,7 @@ def test_credential_token_is_required():
         credential class itself enforces the non-empty token.
     """
     with pytest.raises(ConfigurationError):
-        from automojo.credentials.lambdalabsapikeycredential import (
+        from ccai.credentials.lambdalabsapikeycredential import (
             LambdalabsApiKeyCredential
         )
         LambdalabsApiKeyCredential(identifier="x", categories=["hpc-venue"],

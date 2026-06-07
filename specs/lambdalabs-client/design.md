@@ -18,7 +18,7 @@ provisioner's `apply` is safe to rerun.
 
 ```
 ┌────────────────────────────────────────────────────────┐
-│  automojo-provisioning / venues / lambdalabs           │
+│  codecraftai-provisioning / venues / lambdalabs           │
 │  (CloudProvisioner lifecycle)                          │
 └──────────┬─────────────────────────────────────────────┘
            │
@@ -65,7 +65,7 @@ Exceptions:
 ## Module Layout
 
 ```
-source/packages/automojo/restclient/lambdalabs/
+source/packages/ccai/restclient/lambdalabs/
 ├── __init__.py
 ├── lambdalabsclient.py
 ├── aspectslambdalabs.py
@@ -85,9 +85,9 @@ source/packages/automojo/restclient/lambdalabs/
 
 ## See Also
 
-- `automojo-restclient-base/specs/restapigroup-enhancements/`
-- `automojo-provisioning/specs/venue-lambdalabs/`
-- `automojo-credentials/specs/lambdalabs-credentials/`
+- `codecraftai-restclient-base/specs/restapigroup-enhancements/`
+- `codecraftai-provisioning/specs/venue-lambdalabs/`
+- `codecraftai-credentials/specs/lambdalabs-credentials/`
 
 ---
 

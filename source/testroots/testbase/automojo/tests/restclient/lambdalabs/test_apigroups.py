@@ -10,7 +10,7 @@
 """
 
 __author__ = "Myron Walker"
-__copyright__ = "Copyright 2026, Automation Mojo LLC"
+__copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
@@ -19,18 +19,18 @@ import json
 import pytest
 import requests_mock as rm_module
 
-from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
+from ccai.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
-from automojo.restclient.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
-from automojo.restclient.lambdalabs.specs.lambdalabsclusterspec import (
+from ccai.restclient.lambdalabs.model.lambdalabssshkey import LambdalabsSshKey
+from ccai.restclient.lambdalabs.specs.lambdalabsclusterspec import (
     LambdalabsClusterSpec
 )
-from automojo.restclient.lambdalabs.specs.lambdalabslaunchspec import (
+from ccai.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from automojo.tests.restclient.lambdalabs.testsupport import (
+from ccai.tests.restclient.lambdalabs.testsupport import (
     API, data_envelope, make_client
 )
 

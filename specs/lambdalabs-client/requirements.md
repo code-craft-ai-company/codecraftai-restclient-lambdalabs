@@ -6,10 +6,10 @@ The `lambdalabs-client` feature provides a REST client for Lambda Labs'
 cloud API. The API surface is small and IaaS-shaped: instances, SSH keys,
 file systems, instance types, and 1-click clusters. This client exposes
 exactly those primitives so the `venue-lambdalabs` provisioner in
-`automojo-provisioning` can implement the neutral
+`codecraftai-provisioning` can implement the neutral
 `plan / apply / destroy / inventory` lifecycle.
 
-The client is built on `RestClientBase` from `automojo-restclient-base`,
+The client is built on `RestClientBase` from `codecraftai-restclient-base`,
 authenticates with a typed `LambdalabsApiKeyCredential`, and exposes
 `aspects: AspectsRest = DEFAULT_LAMBDALABS_ASPECTS` on every behaviour-bearing
 call. The client does not interpret the neutral provisioning model directly —

@@ -9,7 +9,7 @@
 """
 
 __author__ = "Myron Walker"
-__copyright__ = "Copyright 2026, Automation Mojo LLC"
+__copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
@@ -21,19 +21,19 @@ import pytest
 from hypothesis import given, settings
 from hypothesis import strategies as st
 
-from automojo.errors.exceptions import SemanticError
+from ccai.errors.exceptions import SemanticError
 
-from automojo.restclient.lambdalabs.apigroups.groupsupport import (
+from ccai.restclient.lambdalabs.apigroups.groupsupport import (
     compose_leaf, encode_segment
 )
-from automojo.restclient.lambdalabs.apigroups.pagingsupport import (
+from ccai.restclient.lambdalabs.apigroups.pagingsupport import (
     collect_all_pages
 )
-from automojo.restclient.lambdalabs.aspectslambdalabs import AspectsLambdalabs
-from automojo.restclient.lambdalabs.exceptions.lambdalabserrors import (
+from ccai.restclient.lambdalabs.aspectslambdalabs import AspectsLambdalabs
+from ccai.restclient.lambdalabs.exceptions.lambdalabserrors import (
     LambdalabsInstanceFailedError
 )
-from automojo.restclient.lambdalabs.model.lambdalabsinstance import (
+from ccai.restclient.lambdalabs.model.lambdalabsinstance import (
     LambdalabsInstance
 )
 
@@ -215,7 +215,7 @@ def _bind_waiter(stream_client):
 
         :returns: A callable equivalent to the bound waiter method.
     """
-    from automojo.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
+    from ccai.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
     def _call(*, instance_id: str, aspects):
         rtnval = LambdalabsClient.wait_until_running(stream_client,

@@ -18,8 +18,8 @@ from urllib.parse import quote
 
 import pytest
 
-from hypothesis import given, settings
-from hypothesis import strategies as st
+from ccai.testbase.properties import given
+from ccai.testbase.properties import strategies as st
 
 from ccai.errors.exceptions import SemanticError
 
@@ -42,8 +42,8 @@ from ccai.restclient.lambdalabs.model.lambdalabsinstance import (
 # Paging cursor traversal
 # ----------------------------------------------------------------------
 
-@settings(max_examples=80)
-@given(page_sizes=st.lists(st.integers(min_value=0, max_value=6),
+@given(
+    constraints={"max_examples": 80},page_sizes=st.lists(st.integers(min_value=0, max_value=6),
                            min_size=1, max_size=10))
 def test_paging_visits_every_item_exactly_once(page_sizes):
     """
@@ -80,8 +80,8 @@ def test_paging_visits_every_item_exactly_once(page_sizes):
 # URL composition
 # ----------------------------------------------------------------------
 
-@settings(max_examples=100)
-@given(segments=st.lists(
+@given(
+    constraints={"max_examples": 100},segments=st.lists(
     st.text(alphabet=st.characters(min_codepoint=33, max_codepoint=126),
             min_size=1, max_size=12),
     min_size=1, max_size=5))
@@ -103,8 +103,7 @@ def test_compose_leaf_is_deterministic_and_per_segment_encoded(segments):
     return
 
 
-@settings(max_examples=50)
-@given(bad=st.sampled_from([None, ""]))
+@given(bad=st.sampled_from([None, ""]), constraints={"max_examples": 50})
 def test_encode_segment_rejects_empty_or_none(bad):
     """
         ``encode_segment`` raises SemanticError on an empty or None segment.
@@ -127,8 +126,8 @@ def test_compose_leaf_rejects_empty_parts_list():
 # Idempotent retry semantics
 # ----------------------------------------------------------------------
 
-@settings(max_examples=60)
-@given(failures=st.integers(min_value=0, max_value=4),
+@given(
+    constraints={"max_examples": 60},failures=st.integers(min_value=0, max_value=4),
        budget=st.integers(min_value=0, max_value=4))
 def test_idempotent_retry_within_and_beyond_budget(failures, budget):
     """
@@ -226,8 +225,7 @@ def _bind_waiter(stream_client):
     return _call
 
 
-@settings(max_examples=60, deadline=None)
-@given(booting_count=st.integers(min_value=0, max_value=8))
+@given(booting_count=st.integers(min_value=0, max_value=8), constraints={"max_examples": 60})
 def test_waiter_terminates_on_first_active(booting_count):
     """
         The waiter returns on the first ``active`` status in a monotonic
@@ -243,8 +241,7 @@ def test_waiter_terminates_on_first_active(booting_count):
     return
 
 
-@settings(max_examples=40, deadline=None)
-@given(stream_length=st.integers(min_value=1, max_value=6))
+@given(stream_length=st.integers(min_value=1, max_value=6), constraints={"max_examples": 40})
 def test_waiter_times_out_when_never_active(stream_length):
     """
         The waiter raises TimeoutError when the stream never reaches

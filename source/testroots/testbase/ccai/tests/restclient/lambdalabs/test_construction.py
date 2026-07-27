@@ -12,7 +12,8 @@ __copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
-import pytest
+from ccai import testbase
+
 
 from ccai.errors.exceptions import ConfigurationError
 
@@ -40,7 +41,7 @@ def test_construct_rejects_wrong_credential_type():
     """
     wrong = BasicCredential(identifier="wrong", categories=["basic"],
                             username="u", password="p")
-    with pytest.raises(ConfigurationError):
+    with testbase.raises(ConfigurationError):
         LambdalabsClient(credential=wrong)
     return
 
@@ -64,7 +65,7 @@ def test_credential_token_is_required():
         A credential constructed without a token cannot exist; the
         credential class itself enforces the non-empty token.
     """
-    with pytest.raises(ConfigurationError):
+    with testbase.raises(ConfigurationError):
         from ccai.credentials.lambdalabsapikeycredential import (
             LambdalabsApiKeyCredential
         )

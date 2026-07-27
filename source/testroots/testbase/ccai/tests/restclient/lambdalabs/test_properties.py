@@ -13,10 +13,12 @@ __copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
+from ccai import testbase
+
+
 from typing import List, Optional, Tuple
 from urllib.parse import quote
 
-import pytest
 
 from ccai.testbase.properties import given
 from ccai.testbase.properties import strategies as st
@@ -108,7 +110,7 @@ def test_encode_segment_rejects_empty_or_none(bad):
     """
         ``encode_segment`` raises SemanticError on an empty or None segment.
     """
-    with pytest.raises(SemanticError):
+    with testbase.raises(SemanticError):
         encode_segment(segment=bad)
     return
 
@@ -117,7 +119,7 @@ def test_compose_leaf_rejects_empty_parts_list():
     """
         ``compose_leaf`` raises SemanticError on an empty parts list.
     """
-    with pytest.raises(SemanticError):
+    with testbase.raises(SemanticError):
         compose_leaf(parts=[])
     return
 
@@ -252,7 +254,7 @@ def test_waiter_times_out_when_never_active(stream_length):
     waiter = _bind_waiter(stream)
     aspects = AspectsLambdalabs(wait_running_timeout_seconds=0.0,
                                 wait_running_interval_seconds=0.0)
-    with pytest.raises(TimeoutError):
+    with testbase.raises(TimeoutError):
         waiter(instance_id="i1", aspects=aspects)
     return
 
@@ -266,6 +268,6 @@ def test_waiter_raises_on_terminal_failed_state():
     waiter = _bind_waiter(stream)
     aspects = AspectsLambdalabs(wait_running_timeout_seconds=1000.0,
                                 wait_running_interval_seconds=0.0)
-    with pytest.raises(LambdalabsInstanceFailedError):
+    with testbase.raises(LambdalabsInstanceFailedError):
         waiter(instance_id="i1", aspects=aspects)
     return

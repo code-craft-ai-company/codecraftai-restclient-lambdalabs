@@ -12,7 +12,9 @@ __copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
-import pytest
+from ccai import testbase
+
+
 import requests_mock as rm_module
 
 from ccai.restclient.lambdalabs.exceptions.lambdalabserrors import (
@@ -37,7 +39,7 @@ def test_http_401_reclassifies_to_authentication_error():
         mock.get("{}/instances".format(API), status_code=401,
                  json=error_envelope(code="global/invalid-api-key",
                                      message="bad key"))
-        with pytest.raises(LambdalabsAuthenticationError):
+        with testbase.raises(LambdalabsAuthenticationError):
             client.list_instances()
     return
 
@@ -51,7 +53,7 @@ def test_http_403_reclassifies_to_authentication_error():
         mock.get("{}/instances".format(API), status_code=403,
                  json=error_envelope(code="global/forbidden",
                                      message="forbidden"))
-        with pytest.raises(LambdalabsAuthenticationError):
+        with testbase.raises(LambdalabsAuthenticationError):
             client.list_instances()
     return
 
@@ -69,7 +71,7 @@ def test_quota_error_reclassifies_to_quota_exceeded():
                   status_code=400,
                   json=error_envelope(code="global/quota-exceeded",
                                       message="over quota"))
-        with pytest.raises(LambdalabsQuotaExceededError):
+        with testbase.raises(LambdalabsQuotaExceededError):
             client.launch_instances(spec=spec)
     return
 
@@ -88,7 +90,7 @@ def test_insufficient_capacity_reclassifies_to_quota_exceeded():
                   json=error_envelope(
                       code="instance-operations/launch/insufficient-capacity",
                       message="no capacity"))
-        with pytest.raises(LambdalabsQuotaExceededError):
+        with testbase.raises(LambdalabsQuotaExceededError):
             client.launch_instances(spec=spec)
     return
 
@@ -100,7 +102,7 @@ def test_generic_500_reclassifies_to_lambdalabs_error():
     client = make_client()
     with rm_module.Mocker() as mock:
         mock.get("{}/instances".format(API), status_code=500, text="boom")
-        with pytest.raises(LambdalabsError):
+        with testbase.raises(LambdalabsError):
             client.list_instances()
     return
 
@@ -114,6 +116,6 @@ def test_unknown_instance_type_raises_not_found():
     with rm_module.Mocker() as mock:
         mock.get("{}/instance-types".format(API),
                  json=data_envelope(payload={}))
-        with pytest.raises(LambdalabsInstanceTypeNotFoundError):
+        with testbase.raises(LambdalabsInstanceTypeNotFoundError):
             client.get_instance_type(name="gpu_404x_unknown")
     return

@@ -51,7 +51,7 @@ typed `LambdalabsApiKeyCredential` instances from `codecraftai-credentials`.
 The 'codecraftai-restclient-lambdalabs' package repository utilizes the 'testbase' framework
 for tests that require live resources, and the 'unittest' framework for isolated
 component tests. Single-host tests live under
-'source/testroots/ccai/tests/singlehost/restclient/lambdalabs'.
+'source/testroots/testbase/ccai/tests/restclient/lambdalabs'.
 
 Property-based tests (`ccai.testbase.properties`, NOT hypothesis) are required for paging, URL composition for
 nested resources, and idempotent retry semantics.

@@ -21,7 +21,7 @@ from ccai.credentials.basiccredential import BasicCredential
 
 from ccai.restclient.lambdalabs.lambdalabsclient import LambdalabsClient
 
-from ccai.tests.restclient.lambdalabs.testsupport import (
+from .testsupport import (
     make_client, make_credential
 )
 

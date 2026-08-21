@@ -25,7 +25,7 @@ from ccai.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from ccai.tests.restclient.lambdalabs.testsupport import (
+from .testsupport import (
     API, data_envelope, error_envelope, make_client
 )
 

@@ -16,7 +16,6 @@ __credits__ = []
 
 import json
 
-import pytest
 import requests_mock as rm_module
 
 from ccai.restclient.lambdalabs.model.lambdalabsinstance import (
@@ -30,7 +29,7 @@ from ccai.restclient.lambdalabs.specs.lambdalabslaunchspec import (
     LambdalabsLaunchSpec
 )
 
-from .testsupport import (
+from testbase.ccai.tests.restclient.lambdalabs.testsupport import (
     API, data_envelope, make_client
 )
 

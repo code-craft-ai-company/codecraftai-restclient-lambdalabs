@@ -12,7 +12,7 @@ __copyright__ = "Copyright 2026, Code Craft AI LLC"
 __credits__ = []
 
 
-from typing import Dict, List
+from typing import List
 
 from ccai.restclient.base.restapigroup import RestApiGroup
 
